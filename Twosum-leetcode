@@ -1,0 +1,13 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int n = nums.length; // Get the length of the input array
+        for (int i = 0; i < n - 1; i++) { // Loop through the array from the beginning
+            for (int j = i + 1; j < n; j++) { // Nested loop to compare each pair of numbers
+                if (nums[i] + nums[j] == target) { // Check if the sum of two numbers equals the target
+                    return new int[]{i, j}; // If a solution is found, return the indices of the two numbers
+                }
+            }
+        }
+        return new int[]{}; // If no solution is found, return an empty array to indicate that no such pair exists
+    }
+}
